@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dev-Livia | Portifólio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="particulas"></div>
+    
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+    
+        <img src="img/Dev-Livia.jpg" alt="Logo Dev-Livia" class="foto-perfil"></img>
+        <h1 class="typing">Livia Marques Carrilho</h1>
+        <p class="cabecalho-sub-titulo">Desenvolvedor Front End</p>
+        
+
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo"> Sobre Mim </h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá, meu nome é Livia Marques Carrilho, sou estudante de Análise e Desenvolvimento de Sistemas e desenvolvedora Front End. 
+                Estou sempre em busca de novos desafios e oportunidades para aprender e crescer na área de tecnologia.
+                Sou apaixonada por programação e design, e estou sempre em busca de novas maneiras de aprimorar minhas habilidades.
+                Atualmente, curso Tecnólogo em Análise e Desenvolvimento de Sistemas pela Universidade Cruzeiro do Sul (UNICSUL), em São Paulo – SP. Além da graduação, venho me qualificando por meio de cursos complementares, como o curso Python da (FATEC), e também estou em andamento no curso Programação Web Front-end (Udemy), onde estudo fundamentos essenciais como HTML, CSS, Lógica de Programação e JavaScript.
+            </p>
+        </div>
+    </section>
+    
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo"> Meus Projetos </h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="img/cat-espera.jpg" alt="Projeto 1" class="projetos-imagem"></img>
+                <div class="caixa-textos-projeto">
+                   <h3 class="info-projetos">Nome do Projeto</h3>
+                    <p class="paragrafo-projetos">Sobre o projeto..... </p>
+                </div>
+                
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/cat-espera.jpg" alt="Projeto 2" class="projetos-imagem"></img>
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Nome do Projeto</h3>
+                    <p class="paragrafo-projetos">Sobre o projeto..... </p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/cat-espera.jpg" alt="Projeto 3" class="projetos-imagem"></img>
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Nome do Projeto</h3>
+                    <p class="paragrafo-projetos">Sobre o projeto..... </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo"> Entre em Contato </h2>
+
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form"> 
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form"  placeholder="Digite sua Mensagem" rows="4" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+
+
+        </form>
+
+    </section>
+
+    <section class="redes-sociais">
+        <h2 class="redes-sociais-titulo"> Redes Sociais </h2>
+        <div class="redes-sociais-caixa">
+
+            <a href="https://www.instagram.com/liviamarques____/" target="_blank" class="link-rede-social">
+                <img src="img/Instagram_logo.png" alt="Instagram" class="rede-social-imagem"></img>
+            </a>
+
+            <a href="https://www.linkedin.com/in/livia-marques-carrilho-8688bb344/" target="_blank" class="link-rede-social">
+                <img src="img/linkedin.png" alt="LinkedIn" class="rede-social-imagem"></img>
+            </a>
+
+            <a href="https://github.com/LiviaMq-dev" target="_blank" class="link-rede-social">
+                <img src="img/github.png" alt="github" class="rede-social-imagem"></img>
+            </a>
+
+        </div>
+    </section>
+
+            
+            
+            
+              
+
+    <footer class="rodape">
+
+        <p class="rodape-texto">© 2025 - Desenvolvido por Livia Marques Carrilho</p>
+
+    </footer>
+
+
+    <script>
+
+        function enviarWhats(event) {
+
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5511971017655'
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+            const msgFormatado = encodeURIComponent(texto)
+            const url = `https://wa.me/${telefone}?text=${msgFormatado}`
+
+            console.log(url)
+
+            window.open(url, '_blank')
+
+    
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const typingElement = document.querySelector('.typing');
+    const fullName = "Livia Marques Carrilho";
+    let index = 0;
+    let isDeleting = false;
+    let text = '';
+    
+    function typeEffect() {
+        // Determina a velocidade da digitação
+        const typingSpeed = isDeleting ? 50 : 150;
+        
+        if (!isDeleting && text.length < fullName.length) {
+            // Adiciona um caractere
+            text = fullName.substring(0, text.length + 1);
+        } else if (isDeleting && text.length > 0) {
+            // Remove um caractere
+            text = fullName.substring(0, text.length - 1);
+        } else {
+            // Muda a direção (digitar ou apagar)
+            isDeleting = !isDeleting;
+            
+            // Pausa maior quando termina de digitar (5 segundos = 5000ms)
+            if (!isDeleting) {
+                setTimeout(typeEffect, 500); // Espera 5 segundos antes de começar a apagar
+                return;
+            } else {
+                // Pequena pausa antes de começar a digitar novamente
+                setTimeout(typeEffect, 6000);
+                return;
+            }
+        }
+        
+        // Atualiza o texto no elemento
+        typingElement.textContent = text;
+        
+        // Chama a função novamente
+        setTimeout(typeEffect, typingSpeed);
+    }
+    
+    // Inicia o efeito de digitação
+    typeEffect();
+});
+
+    
+    
+    </script>
+
+
+
+</body>
+</html>
