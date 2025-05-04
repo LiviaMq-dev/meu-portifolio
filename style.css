@@ -48,7 +48,6 @@ body{
     font-size: 18px;
     color: var(--claro);
     font-weight: 500;
-    position: relative;
     padding: 0.5rem 0;
 }
 
@@ -167,6 +166,7 @@ body{
     padding: 6rem 2rem;
 }
 
+
 .projetos-titulo{
     text-align: center;
     font-size: 2.5rem;
@@ -207,6 +207,10 @@ body{
     transform: translateY(-10px) scale(1.03);
 }
 
+ a{
+    text-decoration: none;
+    color: inherit;
+}
 
 .paragrafo-projetos{
     color: rgb(240, 189, 198);
@@ -378,11 +382,12 @@ body {
     justify-content: center;
     list-style: none;
     gap: 3rem;
+    
 }
 
 .menu-link {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 23px;
     color: var(--claro);
     font-weight: 500;
     position: relative;
@@ -487,7 +492,7 @@ body {
 
 .sobre-paragrafo {
     text-align: center;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .projetos {
@@ -627,6 +632,7 @@ body {
     border-top: 1px solid rgb(240, 189, 198);
     margin-top: 2rem;
     font-style: italic;
+    font-size: 17px;
 }
 
 .redes-sociais {
@@ -708,6 +714,7 @@ body {
 
     .navegacao {
         padding: 1rem;
+        
     }
 
     .projetos,
@@ -722,4 +729,7 @@ body {
     .redes-sociais-titulo {
         font-size: 2rem;
     }
+
 }
+
+
