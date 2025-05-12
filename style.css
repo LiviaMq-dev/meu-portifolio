@@ -663,8 +663,8 @@ body {
 }
 
 .rede-social-imagem {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
